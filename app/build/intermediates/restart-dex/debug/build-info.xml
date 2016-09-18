@@ -1,43 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="23"
-    density="xxxhdpi"
+    api-level="22"
+    density="xhdpi"
     format="7"
-    timestamp="74495249272592"
+    timestamp="76375411102894"
     token="-7783781718759346457" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="531" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="648" />
     <task
         name="verifier"
-        duration="0" />
+        duration="116" />
 
     <artifact
-        location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-        type="DEX" />
+        location="C:\Users\Max\StudioProjects\cancerreport\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="71354205445678" >
+    <build timestamp="76375411102894" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="73522425790740" >
-        <artifact
-            location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
-    <build timestamp="74495249272592" >
-        <artifact
-            location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

@@ -1,3 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.jjoe64\graphview\4.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="4b8b2f5caae96e0b1e51dcc5848a8040775353cb">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jjoe64-graphview-4.2.0_6a5e8a95e3e66ef924107283b5028ec3d1510eda\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.1.1_925c8386af8d0e48bc252e52bf7718c6425a6876\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_9edd3e0e01c4484267f0aeb619ea31452b20e790\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-20.0.0_bd56cd6f2cc435087cbfefa81e712e2270ead431\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d4029f02065c18d99866949671a9d138e0fcf20d">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_73cda6196033eb020c51c63d5661b22f3bec2373\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="28085d00802ad58616932afa1e9615b9d989e41c">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_929476fad4416ef88c24776ddeb6cab732c09ce1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Max\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.1.1_0befc58c76de6accd69102bc1733efbe9a0bda95\classes.dex" />
+    </item>
+
+</items>
