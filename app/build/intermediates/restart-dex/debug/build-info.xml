@@ -4,43 +4,50 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="27457987584892"
+    timestamp="67232233706098"
     token="-7783781718759346457"
-    verifier="METHOD_ADDED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="180" />
+        duration="325" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="706" />
     <task
         name="instant-run-transform"
-        duration="73" />
+        duration="203" />
     <task
         name="verifier"
-        duration="4" />
+        duration="18" />
 
     <artifact
-        location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-        type="DEX" />
+        location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="24190006376897" >
+    <build timestamp="64984407141851" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="26897063343617" >
+    <build timestamp="66977986416593" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
     </build>
     <build
-        timestamp="27457987584892"
-        verifier="METHOD_ADDED" >
+        timestamp="67115847017757"
+        verifier="METHOD_DELETED" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="67232233706098"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

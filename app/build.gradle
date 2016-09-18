@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.cancerreport"
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 21
     }
 
@@ -16,9 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    compileOptions {
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
+    }
 }
 
 dependencies {
     compile 'com.android.support:appcompat-v7:20.0.0'
     compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.jjoe64:graphview:4.2.0'
 }

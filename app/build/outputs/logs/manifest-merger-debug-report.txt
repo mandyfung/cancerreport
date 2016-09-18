@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml
@@ -18,8 +18,10 @@ ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest
 uses-sdk
 ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\AndroidManifest.xml:16:5-42
-MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\AndroidManifest.xml:16:5-42
-MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\AndroidManifest.xml:16:5-42
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.jjoe64:graphview:4.2.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.jjoe64\graphview\4.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml
@@ -29,12 +31,16 @@ MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\
 		INJECTED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:11:5-27:19
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:11:5-28:19
 MERGED from [com.android.support:appcompat-v7:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\AndroidManifest.xml:17:5-19
-MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\AndroidManifest.xml:17:5-19
-MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\AndroidManifest.xml:17:5-19
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.jjoe64:graphview:4.2.0] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.jjoe64\graphview\4.2.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:support-v4:22.1.1] C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:14:9-41
+	android:hardwareAccelerated
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
 		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:12:9-35
 	android:icon
@@ -42,22 +48,22 @@ MERGED from [com.android.support:support-v4:20.0.0] C:\Users\Max\StudioProjects\
 	android:theme
 		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.example.cancerreport.Main
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:16:9-26:20
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:17:9-27:20
 	android:label
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:19:13-45
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:20:13-45
 	android:configChanges
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:18:13-74
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:19:13-74
 	android:theme
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:20:13-51
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:21:13-51
 	android:name
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:17:13-33
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:18:13-33
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\Max\StudioProjects\cancerreport\app\src\main\AndroidManifest.xml:25:27-74

@@ -5,6 +5,7 @@ import com.example.cancerreport.util.SystemUiHider;
 import com.jjoe64.graphview.GraphView;
 
 import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -118,12 +124,13 @@ public class Main extends Activity {
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
-		findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+		//findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
 		addListenerOnRatingBar();
 		addListenerOnHoursSlept();
 
-		generateGraphs(contentView);		
+		generateGraphs(contentView);
+
 	}
 
 	private void generateGraphs(final View contentView) {
@@ -131,17 +138,32 @@ public class Main extends Activity {
 		final GraphView graph = new GraphView(this);
 		final TextView tv = new TextView(this);
 		final FrameLayout layout = new FrameLayout(this);
+		final Button backBtn = new Button(this);
 		View.OnClickListener handler = new View.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-		        tv.setText("Graphs");
-		        tv.setGravity(Gravity.CENTER);
-		        layout.addView(tv);
+
+
 				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
 				reportGenerator.createGraph(graph);
 				layout.addView(graph);
-		        setContentView(layout);				
+
+				backBtn.setText("Back");
+				backBtn.setGravity(Gravity.CENTER);
+				layout.addView(backBtn);
+				View.OnClickListener backBtnHandler = new View.OnClickListener() {
+
+					@Override
+					public void onClick(View view) {
+						setContentView(R.layout.activity_fullscreen);
+						addListenerOnRatingBar();
+						addListenerOnHoursSlept();
+						generateGraphs(contentView);
+					}
+				};
+				backBtn.setOnClickListener(backBtnHandler);
+				setContentView(layout);
 			}
 			
 		};
@@ -194,7 +216,6 @@ public class Main extends Activity {
 	//private float ratingValue;
 
 	public void addListenerOnRatingBar() {
-		System.out.println("DIDIGETHERE");
 		ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 		//txtRatingValue = (TextView)
 		//ratingValue = ratingBar.getRating();
@@ -213,21 +234,57 @@ public class Main extends Activity {
 	}
 
 	public void addListenerOnHoursSlept() {
-		System.out.println("DIDIGETHERE");
-		ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-		//txtRatingValue = (TextView)
-		//ratingValue = ratingBar.getRating();
-
-		//if rating value is changed,
-		//display the current rating value in the result (textview) automatically
-		ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-			public void onRatingChanged(RatingBar ratingBar, float rating,
-										boolean fromUser) {
-
-				//txtRatingValue.setText(String.valueOf(rating));
-				System.out.println(rating);
-				ratingValue = rating;
+		final EditText ratingBar = (EditText) findViewById(R.id.hoursEntry);
+		final String[] YourTextString = new String[1];
+		ratingBar.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+				YourTextString[0] = ratingBar.getText().toString();
+				System.out.println(YourTextString[0]);
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
 			}
 		});
 	}
+/*
+	public void addListenerOnHoursSlept() {
+		final EditText ratingBar = (EditText) findViewById(R.id.hoursEntry);
+		final String[] YourTextString = new String[1];
+		ratingBar.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+				YourTextString[0] = ratingBar.getText().toString();
+				System.out.println(YourTextString[0]);
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+			}
+		});
+	}
+
+	public void addListenerOnHoursSlept() {
+		final EditText ratingBar = (EditText) findViewById(R.id.hoursEntry);
+		final String[] YourTextString = new String[1];
+		ratingBar.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+				YourTextString[0] = ratingBar.getText().toString();
+				System.out.println(YourTextString[0]);
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+			}
+		});
+	}
+*/
 }
