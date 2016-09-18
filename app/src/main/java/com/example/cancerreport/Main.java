@@ -7,6 +7,9 @@ import com.jjoe64.graphview.GraphView;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,6 +29,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -35,9 +40,10 @@ import java.text.SimpleDateFormat;
  */
 public class Main extends Activity {
 	private float ratingValue;
-	private float hoursSleptValue;
-	private float bodyWeightValue;
-	private float hoursOfPhysicalActivityValue;
+	private String hoursSleptValue;
+	private String incidentsValue;
+	private String bodyWeightValue;
+	private String exerciseValue;
 	/**
 	 * Whether or not the system UI should be auto-hidden after
 	 * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -114,34 +120,65 @@ public class Main extends Activity {
 		});
 
 		// Set up the user interaction to manually show or hide the system UI.
-		contentView.setOnClickListener(new View.OnClickListener() {
+		/*contentView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
+
 				if (TOGGLE_ON_CLICK) {
 					mSystemUiHider.toggle();
 				} else {
 					mSystemUiHider.show();
 				}
 			}
+
 		});
+		*/
 
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
 		//findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
-		addListenerOnRatingBar();
-		addListenerOnHoursSlept();
+		setUp(contentView);
 
-		generateGraphs(contentView);
-
-		long date = System.currentTimeMillis();
-
-		SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
-		String dateString = sdf.format(date);
-		//tvDisplayDate.setText(dateString);
 	}
 
+	private void setUp(View contentView){
+		setDate();
+		addListenerOnRatingBar();
+		addListenerOnHoursSlept();
+		addListenerOnExerciseHours();
+		addListenerOnIncidents();
+		addListenerOnBodyWeight();
+		addListenerOnButton();
+		generateGraphs(contentView);
+
+	}
+	private void setDate(){
+		long date = System.currentTimeMillis();
+
+		TextView tv = (TextView) findViewById(R.id.dateID);
+		String dt;
+		Date cal = (Date) Calendar.getInstance().getTime();
+		dt = cal.toLocaleString();
+		tv.setText(dt.toString());
+
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy");
+		String dateString = sdf.format(date);
+		tv.setText(dateString);
+
+		RatingBar rb = (RatingBar) findViewById(R.id.ratingBar);
+		rb.setRating(ratingValue);
+
+		TextView tv1 = (TextView) findViewById(R.id.hoursEntry);
+		tv1.setText(hoursSleptValue);
+		TextView tv2 = (TextView) findViewById(R.id.IncidentsEntry);
+		tv2.setText(incidentsValue);
+		TextView tv3 = (TextView) findViewById(R.id.BodyWeightEntry);
+		tv3.setText(bodyWeightValue);
+		TextView tv4 = (TextView) findViewById(R.id.physicalActivityEntry);
+		tv4.setText(exerciseValue);
+	}
 	private void generateGraphs(final View contentView) {
 		Button generateGraphBtn = (Button) findViewById(R.id.graphID);
 		final GraphView graph = new GraphView(this);
@@ -164,9 +201,7 @@ public class Main extends Activity {
 					@Override
 					public void onClick(View view) {
 						setContentView(R.layout.activity_fullscreen);
-						addListenerOnRatingBar();
-						addListenerOnHoursSlept();
-						generateGraphs(contentView);
+						setUp(contentView);
 					}
 				};
 				graph.setOnClickListener(backBtnHandler);
@@ -248,24 +283,7 @@ public class Main extends Activity {
 			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
 				YourTextString[0] = ratingBar.getText().toString();
 				System.out.println(YourTextString[0]);
-			}
-			@Override
-			public void afterTextChanged(Editable s) {
-			}
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
-			}
-		});
-	}
-/*
-	public void addListenerOnHoursSlept() {
-		final EditText ratingBar = (EditText) findViewById(R.id.hoursEntry);
-		final String[] YourTextString = new String[1];
-		ratingBar.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
-				YourTextString[0] = ratingBar.getText().toString();
-				System.out.println(YourTextString[0]);
+				hoursSleptValue = YourTextString[0];
 			}
 			@Override
 			public void afterTextChanged(Editable s) {
@@ -276,14 +294,15 @@ public class Main extends Activity {
 		});
 	}
 
-	public void addListenerOnHoursSlept() {
-		final EditText ratingBar = (EditText) findViewById(R.id.hoursEntry);
+	public void addListenerOnIncidents() {
+		final EditText ratingBar = (EditText) findViewById(R.id.IncidentsEntry);
 		final String[] YourTextString = new String[1];
 		ratingBar.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
 				YourTextString[0] = ratingBar.getText().toString();
 				System.out.println(YourTextString[0]);
+				incidentsValue = YourTextString[0];
 			}
 			@Override
 			public void afterTextChanged(Editable s) {
@@ -293,5 +312,69 @@ public class Main extends Activity {
 			}
 		});
 	}
-*/
+
+	public void addListenerOnBodyWeight() {
+		final EditText ratingBar = (EditText) findViewById(R.id.BodyWeightEntry);
+		final String[] YourTextString = new String[1];
+		ratingBar.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+				YourTextString[0] = ratingBar.getText().toString();
+				System.out.println(YourTextString[0]);
+				bodyWeightValue = YourTextString[0];
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+			}
+		});
+	}
+
+	public void addListenerOnExerciseHours() {
+		final EditText ratingBar = (EditText) findViewById(R.id.physicalActivityEntry);
+		final String[] YourTextString = new String[1];
+		ratingBar.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2,int arg3) {
+				YourTextString[0] = ratingBar.getText().toString();
+				System.out.println(YourTextString[0]);
+				exerciseValue = YourTextString[0];
+			}
+			@Override
+			public void afterTextChanged(Editable s) {
+			}
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,int after) {
+			}
+		});
+	}
+
+	public void addListenerOnButton() {
+		Button btnSubmit = (Button) findViewById(R.id.dummy_button);
+
+		//if click on me, then display the current rating value.
+		btnSubmit.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				new AlertDialog.Builder(Main.this)
+						.setTitle("Saved Sucessfully")
+						.setMessage("Your status has been successfully saved today.")
+						.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								// continue with save
+							}
+						})
+						.setIcon(android.R.drawable.ic_dialog_info)
+						.create()
+						.show();
+
+			}
+
+		});
+
+	}
 }

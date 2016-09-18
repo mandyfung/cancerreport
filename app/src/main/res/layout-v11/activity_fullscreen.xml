@@ -66,8 +66,8 @@
                     android:stepSize="0.5"
 
                 android:layout_above="@+id/hoursSleptPerDayID"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                     android:layout_width="wrap_content"
@@ -76,13 +76,12 @@
                     android:text="Comfort Level:"
                     android:id="@+id/comfortLevelID"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/physicalActivityID"
-                android:layout_toEndOf="@+id/physicalActivityID" />
+                android:layout_centerHorizontal="true"/>
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:ems="10"
                     android:id="@+id/IncidentsEntry"
                     android:layout_above="@+id/BodyWeightEntry"
@@ -108,7 +107,8 @@
                     android:id="@+id/BodyWeightEntry"
                 android:layout_above="@+id/physicalActivityEntry"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:text="0" />
 
 
 
@@ -129,10 +129,11 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/physicalActivityEntry"
-                android:layout_marginBottom="37dp"
+                android:layout_marginBottom="36dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:text="0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Hours Of Physical Activity:"
+                android:text="Exercise Hours:"
                 android:id="@+id/physicalActivityID"
                 android:layout_alignBottom="@+id/physicalActivityEntry"
                 android:layout_alignParentLeft="true"
@@ -162,7 +163,8 @@
                 android:id="@+id/hoursEntry"
                 android:layout_alignBottom="@+id/sleepTextID"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:text="0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -180,27 +182,24 @@
                 android:text="Display Graph"
                 android:id="@+id/graphID"
                 android:layout_alignParentTop="true"
-                android:layout_alignRight="@+id/ratingBar"
-                android:layout_alignEnd="@+id/ratingBar" />
+                android:layout_alignParentRight="true"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Emails"
+                android:text="Send Emails"
                 android:id="@+id/emailsID"
-                android:layout_below="@+id/graphID"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_toLeftOf="@+id/graphID" />
 
             <TextClock
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textClock"
-                android:layout_below="@+id/emailsID"
-                android:layout_toLeftOf="@+id/comfortLevelID"
-                android:layout_toStartOf="@+id/comfortLevelID"
+                android:layout_above="@+id/dateID"
+                android:layout_centerHorizontal="true"
                 android:scaleX = "3.5"
-                android:scaleY = "3.5"/>
+                android:scaleY = "3.5"
+                android:paddingBottom="30dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -209,9 +208,10 @@
                 android:text="Large Text"
                 android:id="@+id/dateID"
                 android:layout_above="@+id/comfortLevelID"
-                android:scaleX = "3"
-                android:scaleY = "3"
-                android:layout_centerHorizontal="true" />
+                android:scaleX = "2"
+                android:scaleY = "2"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="30dp"/>
 
 
         </RelativeLayout>

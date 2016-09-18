@@ -1,8 +1,0 @@
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$4$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$5$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$6$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$7$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$3$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\Main$3$1$override.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

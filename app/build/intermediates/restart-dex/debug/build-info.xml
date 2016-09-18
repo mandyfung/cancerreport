@@ -4,40 +4,37 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="69435080934822"
-    token="-7783781718759346457"
-    verifier="FIELD_REMOVED" >
+    timestamp="74495249272592"
+    token="-7783781718759346457" >
 
     <task
         name="javac"
-        duration="235" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="180" />
+        duration="0" />
     <task
         name="verifier"
-        duration="15" />
+        duration="0" />
 
     <artifact
         location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
         type="DEX" />
 
-    <build timestamp="64984407141851" >
+    <build timestamp="71354205445678" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="69057218751407" >
+    <build timestamp="73522425790740" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
     </build>
-    <build
-        timestamp="69435080934822"
-        verifier="FIELD_REMOVED" >
+    <build timestamp="74495249272592" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
             type="DEX" />

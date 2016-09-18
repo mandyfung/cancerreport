@@ -856,8 +856,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020057;
     }
     public static final class id {
-        public static final int BodyWeightEntry=0x7f0b0044;
-        public static final int IncidentsEntry=0x7f0b0043;
+        public static final int BodyWeightEntry=0x7f0b0043;
+        public static final int IncidentsEntry=0x7f0b0042;
         public static final int action_bar=0x7f0b001c;
         public static final int action_bar_activity_content=0x7f0b0000;
         public static final int action_bar_container=0x7f0b001b;
@@ -872,7 +872,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0b0025;
         public static final int always=0x7f0b0013;
         public static final int beginning=0x7f0b000f;
-        public static final int bodyWeightID=0x7f0b0048;
+        public static final int bodyWeightID=0x7f0b0047;
         public static final int checkbox=0x7f0b002d;
         public static final int collapseActionView=0x7f0b0014;
         public static final int comfortLevelID=0x7f0b0041;
@@ -897,15 +897,15 @@ containing a value of this type.
         public static final int icon=0x7f0b002a;
         public static final int ifRoom=0x7f0b0015;
         public static final int image=0x7f0b0027;
-        public static final int incidentsID=0x7f0b0047;
+        public static final int incidentsID=0x7f0b0046;
         public static final int listMode=0x7f0b0006;
         public static final int list_item=0x7f0b0029;
         public static final int middle=0x7f0b0011;
         public static final int never=0x7f0b0016;
         public static final int none=0x7f0b0012;
         public static final int normal=0x7f0b0007;
-        public static final int physicalActivityEntry=0x7f0b0046;
-        public static final int physicalActivityID=0x7f0b0042;
+        public static final int physicalActivityEntry=0x7f0b0045;
+        public static final int physicalActivityID=0x7f0b0048;
         public static final int progress_circular=0x7f0b0004;
         public static final int progress_horizontal=0x7f0b0005;
         public static final int radio=0x7f0b002f;
@@ -924,7 +924,7 @@ containing a value of this type.
         public static final int showCustom=0x7f0b000b;
         public static final int showHome=0x7f0b000c;
         public static final int showTitle=0x7f0b000d;
-        public static final int sleepTextID=0x7f0b0045;
+        public static final int sleepTextID=0x7f0b0044;
         public static final int split_action_bar=0x7f0b001e;
         public static final int submit_area=0x7f0b0039;
         public static final int tabMode=0x7f0b0008;
