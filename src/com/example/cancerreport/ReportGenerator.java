@@ -30,14 +30,14 @@ public class ReportGenerator {
 	    return xPoints;
 	}
 	
-	public void createGraph(GraphView graph) {		
-		List<DataPoint> dataPoints = new ArrayList<>();
+	public void createGraph(GraphView graph) {
+		DataPoint[] dataPoints = new DataPoint[xPoints.size()];
 
 		for (int i = 0; i < xPoints.size(); i++) {
-			dataPoints.add(new DataPoint(xPoints.get(i), yPoints.get(i)));
+			dataPoints[i] = new DataPoint(xPoints.get(i), yPoints.get(i));
 		}
 		
-		LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>((DataPoint[]) dataPoints.toArray());
+		LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(dataPoints);
 		graph.addSeries(series);
 	}
 

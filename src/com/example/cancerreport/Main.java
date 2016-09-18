@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RatingBar;
@@ -125,27 +126,29 @@ public class Main extends Activity {
 		addListenerOnRatingBar();
 		addListenerOnHoursSlept();
 		
-		generateGraphs();		
+		generateGraphs(contentView);		
 	}
 
-	private void generateGraphs() {
+	private void generateGraphs(final View contentView) {
 		Button generateGraphBtn = (Button) findViewById(R.id.graphID);
-		final PopupWindow popUp = new PopupWindow(this);
-        final LinearLayout layout = new LinearLayout(this);
 		final GraphView graph = new GraphView(this);
-		generateGraphBtn.setOnTouchListener(new OnTouchListener() {
+		final TextView tv = new TextView(this);
+		final FrameLayout layout = new FrameLayout(this);
+		View.OnClickListener handler = new View.OnClickListener(){
+
 			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				popUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
+			public void onClick(View v) {
+		        tv.setText("Graphs");
+		        tv.setGravity(Gravity.CENTER);
+		        layout.addView(tv);
 				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
 				reportGenerator.createGraph(graph);
 				layout.addView(graph);
-				return false;
+		        setContentView(layout);				
 			}
-
-        });
-
-        popUp.setContentView(layout);		
+			
+		};
+		generateGraphBtn.setOnClickListener(handler);
 	}
 
 	@Override
