@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -17,6 +19,10 @@ import android.view.View;
  * @see SystemUiHider
  */
 public class Main extends Activity {
+	private float ratingValue;
+	private float hoursSleptValue;
+	private float bodyWeightValue;
+	private float hoursOfPhysicalActivityValue;
 	/**
 	 * Whether or not the system UI should be auto-hidden after
 	 * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -48,7 +54,7 @@ public class Main extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		System.out.println("DIDIGETHERECREATE");
 		setContentView(R.layout.activity_fullscreen);
 
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
@@ -108,6 +114,9 @@ public class Main extends Activity {
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
 		findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+		addListenerOnRatingBar();
+		addListenerOnHoursSlept();
 	}
 
 	@Override
@@ -150,5 +159,46 @@ public class Main extends Activity {
 	private void delayedHide(int delayMillis) {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
+	}
+	private RatingBar ratingBar;
+	private TextView txtRatingValue;
+	//private float ratingValue;
+
+	public void addListenerOnRatingBar() {
+		System.out.println("DIDIGETHERE");
+		ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+		//txtRatingValue = (TextView)
+		//ratingValue = ratingBar.getRating();
+
+		//if rating value is changed,
+		//display the current rating value in the result (textview) automatically
+		ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+			public void onRatingChanged(RatingBar ratingBar, float rating,
+										boolean fromUser) {
+
+				//txtRatingValue.setText(String.valueOf(rating));
+				System.out.println(rating);
+				ratingValue = rating;
+			}
+		});
+	}
+
+	public void addListenerOnHoursSlept() {
+		System.out.println("DIDIGETHERE");
+		ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+		//txtRatingValue = (TextView)
+		//ratingValue = ratingBar.getRating();
+
+		//if rating value is changed,
+		//display the current rating value in the result (textview) automatically
+		ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+			public void onRatingChanged(RatingBar ratingBar, float rating,
+										boolean fromUser) {
+
+				//txtRatingValue.setText(String.valueOf(rating));
+				System.out.println(rating);
+				ratingValue = rating;
+			}
+		});
 	}
 }

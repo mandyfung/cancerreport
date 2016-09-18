@@ -51,7 +51,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="483dp"
             android:layout_gravity="center_horizontal|top">
 
 
