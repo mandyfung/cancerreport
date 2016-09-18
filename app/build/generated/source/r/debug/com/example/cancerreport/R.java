@@ -876,6 +876,7 @@ containing a value of this type.
         public static final int checkbox=0x7f0b002d;
         public static final int collapseActionView=0x7f0b0014;
         public static final int comfortLevelID=0x7f0b0041;
+        public static final int dateID=0x7f0b004d;
         public static final int default_activity_button=0x7f0b0028;
         public static final int dialog=0x7f0b0018;
         public static final int disableHome=0x7f0b0009;
@@ -927,6 +928,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f0b001e;
         public static final int submit_area=0x7f0b0039;
         public static final int tabMode=0x7f0b0008;
+        public static final int textClock=0x7f0b004c;
         public static final int title=0x7f0b002b;
         public static final int top_action_bar=0x7f0b0020;
         public static final int up=0x7f0b0021;

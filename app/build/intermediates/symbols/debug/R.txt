@@ -260,6 +260,7 @@ int id bodyWeightID 0x7f0b0048
 int id checkbox 0x7f0b002d
 int id collapseActionView 0x7f0b0014
 int id comfortLevelID 0x7f0b0041
+int id dateID 0x7f0b004d
 int id default_activity_button 0x7f0b0028
 int id dialog 0x7f0b0018
 int id disableHome 0x7f0b0009
@@ -311,6 +312,7 @@ int id sleepTextID 0x7f0b0045
 int id split_action_bar 0x7f0b001e
 int id submit_area 0x7f0b0039
 int id tabMode 0x7f0b0008
+int id textClock 0x7f0b004c
 int id title 0x7f0b002b
 int id top_action_bar 0x7f0b0020
 int id up 0x7f0b0021

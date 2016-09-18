@@ -4,50 +4,43 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="67232233706098"
+    timestamp="69435080934822"
     token="-7783781718759346457"
-    verifier="COMPATIBLE" >
+    verifier="FIELD_REMOVED" >
 
     <task
         name="javac"
-        duration="325" />
+        duration="235" />
     <task
         name="instant-run-dex"
-        duration="706" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="203" />
+        duration="180" />
     <task
         name="verifier"
-        duration="18" />
+        duration="15" />
 
     <artifact
-        location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+        type="DEX" />
 
     <build timestamp="64984407141851" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="66977986416593" >
+    <build timestamp="69057218751407" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
     </build>
     <build
-        timestamp="67115847017757"
-        verifier="METHOD_DELETED" >
+        timestamp="69435080934822"
+        verifier="FIELD_REMOVED" >
         <artifact
             location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="67232233706098"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

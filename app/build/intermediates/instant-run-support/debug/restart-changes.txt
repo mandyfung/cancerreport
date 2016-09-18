@@ -1,7 +1,0 @@
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$7.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$3.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$5.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$3$1.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$6.class
-CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\cancerreport\Main$4.class

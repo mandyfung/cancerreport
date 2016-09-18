@@ -25,6 +25,8 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -133,6 +135,11 @@ public class Main extends Activity {
 
 		generateGraphs(contentView);
 
+		long date = System.currentTimeMillis();
+
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
+		String dateString = sdf.format(date);
+		//tvDisplayDate.setText(dateString);
 	}
 
 	private void generateGraphs(final View contentView) {
@@ -146,17 +153,12 @@ public class Main extends Activity {
 			@Override
 			public void onClick(View v) {
 				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
-				RelativeLayout graphLayout = new RelativeLayout();
 				reportGenerator.createGraph(graph);
 				graph.setTitle("Comfort Level");
-				graph.setScaleX(0.5);
-				graph.setScaleY(0.5);
-				graphLayout.addView(graph);
+				graph.setScaleX((float)0.8);
+				graph.setScaleY((float)0.8);
+				layout.addView(graph);
 
-				RelativeLayout backBtnLayout = new RelativeLayout();
-				backBtn.setText("Back");
-				backBtn.setGravity(Gravity.TOP);
-				backBtnLayout.addView(backBtn);
 				View.OnClickListener backBtnHandler = new View.OnClickListener() {
 
 					@Override
@@ -167,9 +169,7 @@ public class Main extends Activity {
 						generateGraphs(contentView);
 					}
 				};
-				backBtn.setOnClickListener(backBtnHandler);
-				layout.addView(graphLayout);
-				layout.addView(backBtnHandler);
+				graph.setOnClickListener(backBtnHandler);
 				setContentView(layout);
 			}
 			
