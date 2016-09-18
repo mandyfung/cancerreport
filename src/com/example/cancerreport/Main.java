@@ -1,14 +1,21 @@
 package com.example.cancerreport;
 
+import com.example.cancerreport.mockdata.MockData;
 import com.example.cancerreport.util.SystemUiHider;
+import com.jjoe64.graphview.GraphView;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -117,6 +124,28 @@ public class Main extends Activity {
 
 		addListenerOnRatingBar();
 		addListenerOnHoursSlept();
+		
+		generateGraphs();		
+	}
+
+	private void generateGraphs() {
+		Button generateGraphBtn = (Button) findViewById(R.id.graphID);
+		final PopupWindow popUp = new PopupWindow(this);
+        final LinearLayout layout = new LinearLayout(this);
+		final GraphView graph = new GraphView(this);
+		generateGraphBtn.setOnTouchListener(new OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				popUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
+				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
+				reportGenerator.createGraph(graph);
+				layout.addView(graph);
+				return false;
+			}
+
+        });
+
+        popUp.setContentView(layout);		
 	}
 
 	@Override
