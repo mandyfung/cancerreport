@@ -15,12 +15,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -137,21 +139,24 @@ public class Main extends Activity {
 		Button generateGraphBtn = (Button) findViewById(R.id.graphID);
 		final GraphView graph = new GraphView(this);
 		final TextView tv = new TextView(this);
-		final FrameLayout layout = new FrameLayout(this);
+		final LinearLayout layout = new LinearLayout(this);
 		final Button backBtn = new Button(this);
 		View.OnClickListener handler = new View.OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
-
-
 				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
+				RelativeLayout graphLayout = new RelativeLayout();
 				reportGenerator.createGraph(graph);
-				layout.addView(graph);
+				graph.setTitle("Comfort Level");
+				graph.setScaleX(0.5);
+				graph.setScaleY(0.5);
+				graphLayout.addView(graph);
 
+				RelativeLayout backBtnLayout = new RelativeLayout();
 				backBtn.setText("Back");
-				backBtn.setGravity(Gravity.CENTER);
-				layout.addView(backBtn);
+				backBtn.setGravity(Gravity.TOP);
+				backBtnLayout.addView(backBtn);
 				View.OnClickListener backBtnHandler = new View.OnClickListener() {
 
 					@Override
@@ -163,6 +168,8 @@ public class Main extends Activity {
 					}
 				};
 				backBtn.setOnClickListener(backBtnHandler);
+				layout.addView(graphLayout);
+				layout.addView(backBtnHandler);
 				setContentView(layout);
 			}
 			
