@@ -1,14 +1,19 @@
 package com.example.cancerreport;
 
+import com.example.cancerreport.mockdata.MockData;
 import com.example.cancerreport.util.SystemUiHider;
+import com.jjoe64.graphview.GraphView;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -117,6 +122,30 @@ public class Main extends Activity {
 
 		addListenerOnRatingBar();
 		addListenerOnHoursSlept();
+
+		generateGraphs(contentView);		
+	}
+
+	private void generateGraphs(final View contentView) {
+		Button generateGraphBtn = (Button) findViewById(R.id.graphID);
+		final GraphView graph = new GraphView(this);
+		final TextView tv = new TextView(this);
+		final FrameLayout layout = new FrameLayout(this);
+		View.OnClickListener handler = new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+		        tv.setText("Graphs");
+		        tv.setGravity(Gravity.CENTER);
+		        layout.addView(tv);
+				ReportGenerator reportGenerator = new ReportGenerator(MockData.getXPoints(), MockData.getYPoints());
+				reportGenerator.createGraph(graph);
+				layout.addView(graph);
+		        setContentView(layout);				
+			}
+			
+		};
+		generateGraphBtn.setOnClickListener(handler);
 	}
 
 	@Override
