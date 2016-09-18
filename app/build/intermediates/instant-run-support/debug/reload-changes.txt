@@ -1,0 +1,7 @@
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$integer$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$id$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$layout$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$style$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$styleable$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\cancerreport\R$string$override.class
+CHANGED,C:\Users\Max\StudioProjects\cancerreport\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
